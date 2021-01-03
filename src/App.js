@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Card from "./Components/Cards/Cards";
+import green from "../src/Assets/images/nike1.png";
+import red from "../src/Assets/images/nike2.png";
+import blue from "../src/Assets/images/nike3.png";
+import tilt from "../src/Assets/js/vanilla-tilt.min.js";
+
+const sourcedata = [{ img: green }, { img: red }, { img: blue }];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        {sourcedata.map((val) => {
+          return <Card img={val.img} />;
+        })}
+      </div>
+      <script src={tilt}></script>
+    </>
   );
 }
 
