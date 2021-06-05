@@ -1,14 +1,9 @@
-:root {
-  --green: #9bdc28;
-  --red: #fa393a;
-  --blue: #397bf7;
-}
 * {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
-body {
+.bg {
   display: flex;
   justify-content: center;
   align-items: center;

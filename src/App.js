@@ -1,34 +1,18 @@
-import "./App.css";
-import Card from "./Components/Cards/Cards";
-import greenImg from "../src/Assets/images/nike1.png";
-import redImg from "../src/Assets/images/nike2.png";
-import blueImg from "../src/Assets/images/nike3.png";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
+import ParallaxCard from "./pages/ParallaxCard";
+import Home from "./pages/Home";
 
-const sourcedata = [
-  {
-    img: redImg,
-    color: "#fa393a",
-  },
-  {
-    img: greenImg,
-    color: "#9bdc28",
-  },
-  {
-    img: blueImg,
-    color: "#397bf7",
-  },
-];
-
-function App(props) {
+const App = () => {
   return (
     <>
-      <div className="container">
-        {sourcedata.map((val) => {
-          return <Card img={val.img} color={val.color} />;
-        })}
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/card" component={ParallaxCard} />
+        </Switch>
+      </BrowserRouter>
     </>
   );
-}
+};
 
 export default App;

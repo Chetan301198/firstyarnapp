@@ -1,15 +1,11 @@
 import React from "react";
-import "../style.css";
+import "./style.css";
 import Tilt from "react-parallax-tilt";
 
 const Card = (props) => {
   return (
     <>
-      <Tilt
-        className="parallax-effect box"
-        transitionSpeed={400}
-        perspective={1000}
-      >
+      <Tilt className="box" transitionSpeed={400} perspective={1000}>
         <div className="inner-element">
           <div>
             <h2 className="name">Air Max 270</h2>
